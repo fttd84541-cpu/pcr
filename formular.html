@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<title>PČR RP Nábor</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<div>POLICIE PRAHA RP</div>
+</header>
+
+<section class="hero">
+<h1>Nábor Policie ČR</h1>
+<p>RP server – veřejný formulář</p>
+</section>
+
+<section class="box">
+
+<form id="form" action="https://formsubmit.co/fttd84541@gmail.com" method="POST">
+
+<h3>Základní údaje</h3>
+
+<input name="jmeno" placeholder="RP jméno" required>
+<input name="vek" placeholder="OOC věk (13+)" required>
+<input name="discord" placeholder="Discord" required>
+
+<hr>
+
+<h3>RP test (20 otázek)</h3>
+
+<textarea placeholder="1. Hlavní úkol Policie ČR?" required></textarea>
+<textarea placeholder="2. Jak reaguješ na ozbrojenou osobu?" required></textarea>
+<textarea placeholder="3. Silniční kontrola postup?" required></textarea>
+<textarea placeholder="4. Použití zbraně?" required></textarea>
+<textarea placeholder="5. Co je RP Fear?" required></textarea>
+
+<textarea placeholder="6. Co je FailRP?" required></textarea>
+<textarea placeholder="7. Jak řešíš útěk podezřelého?" required></textarea>
+<textarea placeholder="8. Postup zatýkání?" required></textarea>
+<textarea placeholder="9. Priorita v krizi?" required></textarea>
+<textarea placeholder="10. Týmová komunikace?" required></textarea>
+
+<textarea placeholder="11. Dopravní nehoda?" required></textarea>
+<textarea placeholder="12. Chování k civilistům?" required></textarea>
+<textarea placeholder="13. CODE RED?" required></textarea>
+<textarea placeholder="14. Kolega poruší pravidla?" required></textarea>
+<textarea placeholder="15. Stres?" required></textarea>
+
+<textarea placeholder="16. Proč k PČR RP?" required></textarea>
+<textarea placeholder="17. Co očekáváš?" required></textarea>
+<textarea placeholder="18. Disciplína?" required></textarea>
+<textarea placeholder="19. Konflikt řešení?" required></textarea>
+<textarea placeholder="20. Dobrý policista?" required></textarea>
+
+<button type="submit">ODESLAT PŘIHLÁŠKU</button>
+
+</form>
+
+</section>
+
+<footer>
+RP server Policie ČR – náborový systém
+</footer>
+
+<!-- BODOVÁNÍ -->
+<script>
+document.getElementById("form").addEventListener("submit", function() {
+
+  let score = 0;
+  let inputs = document.querySelectorAll("textarea");
+
+  inputs.forEach(i => {
+    let len = i.value.trim().length;
+
+    if (len > 20) score += 1;
+    if (len > 60) score += 1;
+    if (len > 120) score += 1;
+  });
+
+  let max = 60;
+  let min = 45;
+
+  let result = score >= min ? "PŘIJAT ✅" : "NEPŘIJAT ❌";
+
+  alert(
+    "RP skóre: " + score + "/" + max +
+    "\nVýsledek: " + result +
+    "\nMinimum: " + min
+  );
+
+});
+</script>
+
+</body>
+</html>
